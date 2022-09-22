@@ -1,0 +1,55 @@
+
+
+
+
+$systemThemeColor:#45c2b5;  //设置一个系统主题色
+
+//引用element-plus样式 覆盖主题色
+//https://github.com/element-plus/element-plus/blob/dev/packages/theme-chalk/src/common/var.scss
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      'base': $systemThemeColor
+    ),
+  ),
+);
+@use "element-plus/theme-chalk/src/index.scss" as *;
+
+
+:root{
+    --systemThemeColor:var(--el-color-primary); //为element-plus内部使用主题变量， 此处重置为与系统主题色一致
+   --sidebarBgColor:#263238 ;//菜单背景色
+   --navbarHeight:50px;         //navbar高度
+   --sidebarMaxWidht:240px;     //菜单最大宽度
+   --sidebarMinWidht:60px;      //菜单最小宽度
+   --el-menu-hover-bg-color:#2b373d; //menu hoever 背景色          原element变量
+   --el-menu-active-color:var(--systemThemeColor) ;//menu 激活 文字色 原element变量
+   --sidebarActiveBgColor:'inherit'; //menu激活item背景色
+   --sidebarActiveSubmenuTextColor:var(--systemThemeColor); //menu激活的父级item文字颜色
+   --sidebarActiveSubmenuBgColor:'inherit'; //menu激活的父级item背景颜色
+   --sidebarOpenBgColor:#1a2327; //menu展开是的item背景色 //1a2327
+   --el-menu-text-color:#a1abb1; //menu 文字颜色 原element变量
+   --el-menu-sub-item-height:56px; //menu的子item高度
+   --el-menu-hover-text-color:#cbd2d7;//菜单hover文字颜色
+
+   --el-menu-item-font-size: 14px; //一级菜单文字大小
+   --el-sub-menu-item-font-size: 14px; //二级及更小级菜单文字大小
+}
+//暗黑模式
+.dark{
+    --sidebarBgColor: #020202; //菜单背景色
+}
+
+
+$navbarHeight:var(--navbarHeight); //nav高度
+$sidebarMaxWidht:var(--sidebarMaxWidht); //sidebar寬度
+$sidebarBgColor:var(--sidebarBgColor) ;  //菜单背景色
+$sidebarActiveBgColor:var(--sidebarActiveBgColor) ;  //菜单激活背景色
+$sidebarActiveSubmenuTextColor:var(--sidebarActiveSubmenuTextColor);
+$sidebarOpenBgColor:var(--sidebarOpenBgColor); //menu展开的item背景色
+
+
+
+
+
+
