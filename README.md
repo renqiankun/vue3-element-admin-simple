@@ -7,7 +7,7 @@
 
 
 1. 上下、左右布局
-2. 主题色修改(src/theme/element-variable.scss)、 element-plus按需引入(MEssage等组件需单独引入样式)
+2. 主题色修改(src/theme/element-variable.scss)、 element-plus按需引入(ElMessage等组件需单独引入样式)
 3. tabs、面包屑
 4. 细粒度菜单样式修改(src/theme/theme-variable.module.scss)
 5. 尝试高亮父级菜单：子菜单配置hide:true时， 跳转此菜单隐藏的路由会尝试高亮父级，同时退出此路由时此tabs自动关闭(默认开启)
