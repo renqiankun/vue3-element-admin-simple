@@ -10,5 +10,7 @@
 4. 细粒度菜单样式修改(src/theme/theme-variable.module.scss)
 5. 尝试高亮父级菜单：子菜单配置hide:true时， 跳转此菜单隐藏的路由会尝试高亮父级，同时退出此路由时此tabs自动关闭(默认开启)
 6. ~按钮权限指令~
+7. ~菜单缩放~
+8. ~打包图片压缩~
 
 ![image](https://user-images.githubusercontent.com/27206174/191724252-8d32e537-b9c8-412e-b6bc-861796745d66.png)
