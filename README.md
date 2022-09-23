@@ -11,4 +11,5 @@
 5. 尝试高亮父级菜单：子菜单配置hide:true时， 跳转此菜单隐藏的路由会尝试高亮父级，同时退出此路由时此tabs自动关闭(默认开启)
 6. ~按钮权限指令~
 
-![image](https://user-images.githubusercontent.com/27206174/191724252-8d32e537-b9c8-412e-b6bc-861796745d66.png)
+![image](https://user-images.githubusercontent.com/27206174/191883270-37fba4fa-d64c-4fed-a77d-4404a8d6db4d.png)
+
