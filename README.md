@@ -1,5 +1,7 @@
 # Vue 3 + TypeScript + Vite + element-plus + vuex
-
+  
+  npm i
+  npm run dev
 
 ## Type Support For `.vue` Imports in TS
 
