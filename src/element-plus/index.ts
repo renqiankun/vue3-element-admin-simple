@@ -1,3 +1,4 @@
+//废弃
 // import 'element-plus/dist/index.css' //theme中引用
 import { App } from 'vue'
 import {

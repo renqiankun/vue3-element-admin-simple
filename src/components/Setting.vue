@@ -12,7 +12,7 @@
     title="提示"
     :width="200"
     trigger="click"
-    content="此处仅做动态修改演示 因未修改--el-color-primary-light-x的值会导致hover等颜色并没有改变，因此生产环境请直接修改src/theme/theme-variable.modele.scss/$systemThemeColor的值"
+    content="此处仅做动态修改演示 因未修改--el-color-primary-light-x的值会导致hover等颜色并没有改变，因此生产环境请直接修改src/theme/element-variable.scss/base的值"
   >
     <template #reference>
         <el-icon style="margin-left:20px"><QuestionFilled /></el-icon>

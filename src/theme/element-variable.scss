@@ -1,0 +1,11 @@
+//引用element-plus样式 覆盖主题色
+//https://github.com/element-plus/element-plus/blob/dev/packages/theme-chalk/src/common/var.scss
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      'base': #45c2b5
+    ),
+  ),
+);
+//全部样式引入废弃 现使用按需引入
+// @use "element-plus/theme-chalk/src/index.scss" as *;

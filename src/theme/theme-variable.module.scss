@@ -1,21 +1,5 @@
 
 
-
-
-$systemThemeColor:#45c2b5;  //设置一个系统主题色
-
-//引用element-plus样式 覆盖主题色
-//https://github.com/element-plus/element-plus/blob/dev/packages/theme-chalk/src/common/var.scss
-@forward 'element-plus/theme-chalk/src/common/var.scss' with (
-  $colors: (
-    'primary': (
-      'base': $systemThemeColor
-    ),
-  ),
-);
-@use "element-plus/theme-chalk/src/index.scss" as *;
-
-
 :root{
     --systemThemeColor:var(--el-color-primary); //为element-plus内部使用主题变量， 此处重置为与系统主题色一致
    --sidebarBgColor:#263238 ;//菜单背景色
