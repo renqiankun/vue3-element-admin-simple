@@ -13,4 +13,5 @@
 7. ~菜单缩放~
 8. ~打包图片压缩~
 
-![image](https://user-images.githubusercontent.com/27206174/191724252-8d32e537-b9c8-412e-b6bc-861796745d66.png)
+![image](https://user-images.githubusercontent.com/27206174/191883270-37fba4fa-d64c-4fed-a77d-4404a8d6db4d.png)
+
