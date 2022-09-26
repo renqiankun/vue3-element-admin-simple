@@ -42,7 +42,7 @@
         box-sizing: border-box;
         & > ::v-deep(.el-scrollbar__wrap) {
           & > .el-scrollbar__view {
-            min-height: 100%;
+            height: 100%;
             box-sizing: border-box;
             padding: 15px 15px;
             display: flex;
@@ -59,5 +59,6 @@
     padding: 15px;
     flex: 1;
     width: 100%;
+    min-height:100%;
   }
 </style>

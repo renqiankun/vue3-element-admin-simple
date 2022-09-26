@@ -1,5 +1,5 @@
 <template>
-  <el-menu router :default-active="activeMenu" :unique-opened="true">
+  <el-menu  router :mode="mode"  :default-active="activeMenu" :unique-opened="true">
     <template v-for="item in menuTree" :key="item.menuId">
       <sidebar-item v-if="!item.hide" :item="item"></sidebar-item>
     </template>
@@ -11,9 +11,16 @@
   import { useStore } from 'vuex'
   import sidebarItem from './sidebar-item.vue'
   import { useRoute } from 'vue-router'
+
+  interface Props {
+    mode?: any
+  }
+  withDefaults(defineProps<Props>(), {
+    mode: 'vertical'
+  })
   const store = useStore()
   const route = useRoute()
-  const updateActiveMenu = (data:any) => store.commit('pro/updateActiveMenu',data)
+  const updateActiveMenu = (data: any) => store.commit('pro/updateActiveMenu', data)
   let activeMenu = computed(() => store.getters.activeMenu)
   //激活menu为hide时尝试高亮父级
   var highlightParentMenu = computed(() => store.getters.highlightParentMenu)

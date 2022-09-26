@@ -3,6 +3,9 @@
     <div class="left-wrap">
       <span class="nav-text">管理系统</span>
     </div>
+    <!-- <div class="sidebar-wrap">
+       <sidebar  mode='horizontal'/>
+    </div> -->
     <div class="right-wrap">
       <el-badge :hidden="value <= 0" :value="12">
         <svg-icon icon-size="16" icon-name="Bell" />
@@ -28,6 +31,7 @@
 <script setup lang="ts">
   import { CaretBottom } from '@element-plus/icons-vue'
   import defaultHeader from '@/assets/img/header-default.png'
+  import sidebar from '../sidebar/index.vue'
   import { ref } from 'vue'
   var value = ref(2)
 </script>
@@ -43,11 +47,16 @@
     box-sizing: border-box;
     padding: 0 32px;
     background-color: #fff;
+    justify-content: flex-start;
+    .sidebar-wrap{
+      flex: 1;
+    }
     .right-wrap {
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      width: 100%;
+      // width: 100%;
+      margin-left: auto;
     }
     .avtor-wrap {
       margin-left: 43px;
