@@ -14,6 +14,7 @@
 6. ~按钮权限指令~
 7. ~菜单缩放~
 8. ~打包图片压缩~
+9. 暗黑模式支持 （自定义组件未适配）
 
 ![image](https://user-images.githubusercontent.com/27206174/191883270-37fba4fa-d64c-4fed-a77d-4404a8d6db4d.png)
 
