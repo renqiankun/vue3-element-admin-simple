@@ -12,3 +12,4 @@ declare module '@/utils/index'
 declare module '@/router/index'
 
 
+declare module '@/utils/*'

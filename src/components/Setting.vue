@@ -4,6 +4,9 @@
     <div>设置</div>
   </div>
   <el-drawer v-model="drawer" title="配置">
+    <el-divider content-position="left">暗黑</el-divider>
+    <el-switch :modelValue="isDark" @change="toggleDark"/>
+
     <el-divider content-position="left">主题色</el-divider>
     <el-color-picker v-model="color" @change="setColor" />
     <el-popover
@@ -41,6 +44,7 @@
 </template>
 
 <script setup lang="ts">
+import {isDark,toggleDark} from '@/utils/dark'
   import { Setting ,QuestionFilled} from '@element-plus/icons-vue'
   import { ref } from 'vue'
   import { useStore } from 'vuex'
