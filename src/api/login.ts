@@ -1,6 +1,6 @@
 import fetchApi from './_fetchApi'
-var baseUrl = window('SITE').baseUrl
-export function login(params) {
+var baseUrl = (window as any)['SITE'].baseUrl
+export function login(params:any) {
     var url = `${baseUrl}/login/login`
     return fetchApi({
         url: url,
@@ -10,7 +10,7 @@ export function login(params) {
 }
 
 
-export function getMenuList(params){
+export function getMenuList(params:any){
     var url = `${baseUrl}/login/getMenuList`
     return fetchApi({
         url: url,
