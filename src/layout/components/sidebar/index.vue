@@ -47,7 +47,7 @@
     let path: any = route.path
     //不直接提交可以解决 menu不存在此路由时，menu失去高亮
     // store.commit('updateActiveMenu', path)
-    var menu = menuPathmap.value[path]
+    var menu = menuPathmap.value?.[path]??{}
     //menu.hide时 此处尝试高亮父节点
     if (menu.hide && highlightParentMenu.value) {
       path = getParentItemById(menu) || path

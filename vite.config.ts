@@ -10,13 +10,25 @@ import { createHtmlPlugin } from 'vite-plugin-html'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+// import legacy from '@vitejs/plugin-legacy' //低版本浏览器支持
+//配置文件config拷贝
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => {
+export default defineConfig(({ command, mode }) => {
   return {
     base: './',
     plugins: [
       vue(),
       vueJsx(),
+      //复制配置文件
+      viteStaticCopy({
+        targets: [{ src: 'config/index-prod.js', dest: 'config/' }]
+      }),
+      //浏览器兼容性插件 配合build.target:'es2015'(默认modules)
+      //额外多出兼容包、但是只有浏览器不支持时才会使用兼容包
+      // legacy({
+      //   targets: ['defaults', 'not IE 11']
+      // }),
       createSvgIconsPlugin({
         // 配置路径在你的src里的svg存放文件
         iconDirs: [path.resolve(process.cwd(), 'src/icons/svg')],
@@ -46,7 +58,7 @@ export default defineConfig(({ mode }) => {
     ],
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, 'src'),
+        '@': path.resolve(__dirname, 'src')
       }
     },
     css: {
@@ -57,12 +69,16 @@ export default defineConfig(({ mode }) => {
       }
     },
     build: {
+      // target: 'es2015',//配合 plugin-legacy 支持传统浏览器
+      outDir: path.join(__dirname, 'dist'),
+      cssCodeSplit: true, // 如果设置为false，整个项目中的所有 CSS 将被提取到一个 CSS 文件中
+      drop: command === 'build' ? ['console', 'debugger'] : [],
       rollupOptions: {
         output: {
           sourcemap: false,
           manualChunks: {
-            'base-module':['vue','vuex','vue-router','axios','lodash-es'],
-            'element-plus': ['element-plus'],
+            'base-module': ['vue', 'vuex', 'vue-router', 'axios', 'lodash-es'],
+            'element-plus': ['element-plus']
             // echarts: ['echarts']
           },
           // 用于从入口点创建的块的打包输出格式[name]表示文件名,[hash]表示该文件内容hash值

@@ -46,7 +46,7 @@
     align-items: center;
     box-sizing: border-box;
     padding: 0 32px;
-    background-color: #fff;
+    // background-color: #fff;
     justify-content: flex-start;
     .sidebar-wrap{
       flex: 1;
@@ -69,7 +69,7 @@
       cursor: pointer;
       font-size: 14px;
       font-weight: normal;
-      color: #3d3d3d;
+      // color: #3d3d3d;
     }
     .name-text {
       margin: 0 10px 0 10px;
@@ -91,7 +91,7 @@
   .nav-text {
     font-size: 16px;
     font-weight: bold;
-    color: #114357;
+    // color: #114357;
     white-space: nowrap;
     line-height: 30px;
   }
