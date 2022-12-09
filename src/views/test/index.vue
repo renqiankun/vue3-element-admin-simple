@@ -38,4 +38,5 @@
     router.push({ path: '/test/text-child' })
   }
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>

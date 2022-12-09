@@ -7,9 +7,9 @@ import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 //https://zhuanlan.zhihu.com/p/481640259
 import VueSetupExtend from 'vite-plugin-vue-setup-extend'
 import { createHtmlPlugin } from 'vite-plugin-html'
-import AutoImport from 'unplugin-auto-import/vite'
-import Components from 'unplugin-vue-components/vite'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+// import AutoImport from 'unplugin-auto-import/vite'
+// import Components from 'unplugin-vue-components/vite'
+// import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 // import legacy from '@vitejs/plugin-legacy' //低版本浏览器支持
 //配置文件config拷贝
 import { viteStaticCopy } from 'vite-plugin-static-copy'
@@ -22,12 +22,12 @@ export default defineConfig(({ command, mode }) => {
       vueJsx(),
       //复制配置文件
       viteStaticCopy({
-        targets: [{ src: 'config/index-prod.js', dest: 'config/' }]
+        targets: [{ src: 'config/index-prod.js', dest: 'config/' }],
       }),
       //浏览器兼容性插件 配合build.target:'es2015'(默认modules)
       //额外多出兼容包、但是只有浏览器不支持时才会使用兼容包
       // legacy({
-      //   targets: ['defaults', 'not IE 11']
+      //   targets: ['defaults', 'not IE 11'],
       // }),
       createSvgIconsPlugin({
         // 配置路径在你的src里的svg存放文件
@@ -43,31 +43,31 @@ export default defineConfig(({ command, mode }) => {
           }
         }
       }),
-      AutoImport({
-        resolvers: [ElementPlusResolver()]
-      }),
-      Components({
-        resolvers: [
-          ElementPlusResolver({
-            importStyle: 'sass'
-            // directives: true,
-            // version: "2.1.5",
-          })
-        ]
-      })
+      // AutoImport({
+      //   resolvers: [ElementPlusResolver()]
+      // }),
+      // Components({
+      //   resolvers: [
+      //     ElementPlusResolver({
+      //       importStyle: 'sass'
+      //       // directives: true,
+      //       // version: "2.1.5",
+      //     })
+      //   ]
+      // })
     ],
     resolve: {
       alias: {
         '@': path.resolve(__dirname, 'src')
       }
     },
-    css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: `@use "@/theme/element-variable.scss" as *;`
-        }
-      }
-    },
+    // css: {
+    //   preprocessorOptions: {
+    //     scss: {
+    //       additionalData: `@use "@/theme/element-variable.scss" as *;`
+    //     }
+    //   }
+    // },
     build: {
       // target: 'es2015',//配合 plugin-legacy 支持传统浏览器
       outDir: path.join(__dirname, 'dist'),

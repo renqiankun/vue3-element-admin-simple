@@ -18,11 +18,6 @@ html {
   font-family: 'Helvetica Neue', Helvetica, Arial, 'Microsoft Yahei', 'Hiragino Sans GB', 'HeitiSC',
     'WenQuanYi Micro Hei', sans-serif;
 }
-.el-form {
-  .el-form-item__label {
-    color: #131414;
-  }
-}
 .clearFix::after {
   display: block;
   width: 0;
@@ -64,28 +59,14 @@ html {
 ::-webkit-scrollbar-corner {
   background: khaki;
 }
-.container-padding {
-  padding: 10px 20px 20px;
-}
-.scroll-pad {
-  & > .el-scrollbar__wrap {
-    padding: 10px 20px 20px;
-    box-sizing: border-box;
-    & > .el-scrollbar__view {
-      min-height: 100%;
-      box-sizing: border-box;
-    }
-  }
-}
-// 第一种居中处理
 .el-dialog {
   display: flex;
   flex-direction: column;
-  margin: 0 !important;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  // margin: 0 !important;
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
   /*height:600px;*/
   max-height: calc(100% - 10px);
   max-width: calc(100% - 5px);
@@ -93,98 +74,4 @@ html {
 .el-dialog .el-dialog__body {
   flex: 1;
   overflow: auto;
-}
-// //第二种居中 与默认表现一致，仅增加上下居中 不支撑 element-plus的拖拽dialog
-// .el-overlay-dialog {
-//   position: fixed;
-//   overflow: auto;
-//   margin: 0 !important;
-//   top: 50%;
-//   transform: translateY(-50%);
-//   max-height: 100%;
-//   width: 100%;
-//   right: unset;
-//   bottom: unset;
-//   .el-dialog {
-//     margin: 0 auto;
-//   }
-// }
-// .dialog-fade-enter-active .el-overlay-dialog {
-//   animation: model-in 0.3s !important;
-// }
-// .dialog-fade-leave-active .el-overlay-dialog {
-//   animation: model-out 0.3s !important;
-// }
-@keyframes model-in {
-  0% {
-    opacity: 0;
-    transform: translateY(calc(-50% - 20px));
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(-50%);
-  }
-}
-@keyframes model-out {
-  0% {
-    opacity: 1;
-    transform: translateY(-50%);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(calc(-50% - 20px));
-  }
-}
-//以下为业务相关
-//圆
-.el-step__head {
-  .el-step__icon-inner {
-    font-weight: normal;
-  }
-  &.is-process {
-    color: var(--systemThemeColor);
-    border-color: var(--systemThemeColor);
-  }
-  &.is-finish {
-    color: var(--el-color-success);
-    border-color: var(--el-color-success);
-    .el-step__icon.is-text {
-      color: #fff;
-      background: var(--el-color-success);
-    }
-  }
-  &.is-success {
-    .el-step__icon {
-      color: #fff;
-      background-color: var(--el-color-success);
-    }
-  }
-}
-//标题
-.el-step__title {
-  font-weight: 500;
-  &.is-wait {
-    color: #909399;
-  }
-  &.is-process {
-    color: var(--systemThemeColor);
-    border-color: var(--systemThemeColor);
-    font-weight: 500;
-  }
-  &.is-finish {
-    color: var(--el-color-success);
-  }
-}
-//描述
-.el-step__description {
-  &.is-wait {
-    color: #c0c4cc;
-  }
-  &.is-process {
-    color: var(--systemThemeColor);
-    border-color: var(--systemThemeColor);
-  }
-  &.is-finish {
-    color: var(--el-color-success);
-  }
 }

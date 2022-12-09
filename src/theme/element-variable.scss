@@ -9,8 +9,8 @@ $--colors: (
 @forward 'element-plus/theme-chalk/src/common/var.scss' with (
   $colors:$--colors
 );
-//全部样式引入废弃 现使用按需引入
-// @use "element-plus/theme-chalk/src/index.scss" as *;
+//全部样式引入
+@use "element-plus/theme-chalk/src/index.scss" as *;
 
 
 @use './element-dark.scss'

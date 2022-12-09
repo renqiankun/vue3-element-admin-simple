@@ -1,7 +1,10 @@
 <template>
-  <el-dialog  v-model="dialogTableVisible" title="提示">
+  <el-dialog align-center draggable v-model="dialogTableVisible" title="提示">
+    <div>
+      1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>1 <br/>
+    </div>
     <template #footer>
-      <div class="text-center">
+      <div >
         <el-button @click="cancelHand">关闭</el-button>
         <el-button type="primary" @click="submitHand">提交</el-button>
       </div>
