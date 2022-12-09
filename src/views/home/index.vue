@@ -1,7 +1,6 @@
 <template>
-  <el-button @click="showMenssa">首页</el-button>
-
-  <img style="width:100px;height:100px" src="@/assets/img/bg.png" alt="">
+  <el-button v-permission="['sys:btn','sys:no']" @click="showMenssa">首页</el-button>
+  <el-button v-permission="['sys:no']" @click="showMenssa">test</el-button>
 </template>
 
 <script setup lang="ts">

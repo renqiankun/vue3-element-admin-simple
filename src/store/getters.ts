@@ -8,6 +8,7 @@ const getters = {
   menuTree: (state:any) => state.pro.menuTree,
 
   roles: (state:any) => state.user.roles,
-  permissionCodes: (state:any) => state.user.permissionCodes,
+  //权限列表
+  permissionCodes: (state:any) => state.pro.permissionCodes,
 }
 export default getters

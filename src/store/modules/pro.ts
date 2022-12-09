@@ -12,7 +12,8 @@ export default {
     homePath: '/home/index', //首页路径
     activeMenu: '', //激活的菜单id
     menuList: [], //菜单列表  { menuId: 1,parentId:'', title: '首页', path: '/home', }
-    menuTree: [] //菜单树 由menuList转换{ menuId: 1,parentId:'', title: '首页', path: '/home' ,children:[]},
+    menuTree: [], //菜单树 由menuList转换{ menuId: 1,parentId:'', title: '首页', path: '/home' ,children:[]},
+    permissionCodes:['sys:btn'],
   },
   mutations: {
     //修改激活菜单
