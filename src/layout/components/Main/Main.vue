@@ -28,6 +28,12 @@
 </script>
 
 <style lang="scss" scoped>
+  // 周围阴影
+  html:not(.dark) {
+    .main-container {
+      box-shadow: inset 15px 15px 0px #f5f7fa, inset -15px -15px 0px #f5f7fa;
+    }
+  }
   .main-content {
     display: flex;
     flex-direction: column;
@@ -59,6 +65,6 @@
     padding: 15px;
     flex: 1;
     width: 100%;
-    min-height:100%;
+    min-height: 100%;
   }
 </style>
