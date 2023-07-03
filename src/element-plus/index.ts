@@ -183,7 +183,7 @@ const components = [
 ]
 export default {
   install(vue: App) {
-    components.map(item => {
+    components.forEach(item => {
       vue.use(item)
     })
 

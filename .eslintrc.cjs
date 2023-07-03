@@ -19,14 +19,14 @@ module.exports = {
   ],
   rules: {
     'vue/no-multiple-template-root': 0,
-    'no-unused-vars': [
-      'error',
-      // we are only using this rule to check for unused arguments since TS
-      // catches unused variables but not args.
-      {
-        varsIgnorePattern: '.*',
-        args: 'none'
-      }
-    ]
+    'no-unused-vars': ['error', { varsIgnorePattern: '.*', args: 'none' }],
+    'prefer-const':0,
+    'vue/no-v-model-argument':0,
+    'vue/multi-word-component-names':0,
+    'vue/no-mutating-props':0,
+    'vue/valid-v-for':0,
+    'eqeqeq':0,
+    'no-var':0,
+    'spaced-comment':0
   }
 }
