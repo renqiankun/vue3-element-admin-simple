@@ -1,4 +1,5 @@
 ; (function () {
-    window.SITE = {};
-    SITE['baseUrl'] = '';
+    window.SITE = {
+        baseUrl : '/hb2'
+    };
 })();
