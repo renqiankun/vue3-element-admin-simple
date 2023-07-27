@@ -1,7 +1,7 @@
 <template>
   <el-menu  router :mode="mode"  :default-active="activeMenu" :unique-opened="true">
-    <template v-for="item in menuTree" :key="item.menuId">
-      <sidebar-item v-if="!item.hide" :item="item"></sidebar-item>
+    <template v-for="item in menuTree">
+      <sidebar-item v-if="!item.hide" :item="item" :key="item.menuId"></sidebar-item>
     </template>
   </el-menu>
 </template>
