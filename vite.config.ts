@@ -22,7 +22,7 @@ export default defineConfig(({ command, mode }) => {
       vueJsx(),
       //复制配置文件
       viteStaticCopy({
-        targets: [{ src: 'config/index-prod.js', dest: 'config/' }],
+        targets: [{ src: 'config/index-prod.js', dest: 'config/' }]
       }),
       //浏览器兼容性插件 配合build.target:'es2015'(默认modules)
       //额外多出兼容包、但是只有浏览器不支持时才会使用兼容包
@@ -42,7 +42,7 @@ export default defineConfig(({ command, mode }) => {
             urlScript: `${mode == 'development' ? 'dev' : 'prod'}`
           }
         }
-      }),
+      })
       // AutoImport({
       //   resolvers: [ElementPlusResolver()]
       // }),
@@ -68,6 +68,9 @@ export default defineConfig(({ command, mode }) => {
     //     }
     //   }
     // },
+    server: {
+      host: '0.0.0.0'
+    },
     build: {
       // target: 'es2015',//配合 plugin-legacy 支持传统浏览器
       outDir: path.join(__dirname, 'dist'),
