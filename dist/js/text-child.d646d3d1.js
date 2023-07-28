@@ -1,0 +1,1 @@
+import{_ as t}from"./index.c78be0a5.js";import"./base-module.ee10d16b.js";import"./element-plus.2a9868ae.js";const r={};function e(c,o){return" \u5B50\u9875\u9762 "}const f=t(r,[["render",e]]);export{f as default};

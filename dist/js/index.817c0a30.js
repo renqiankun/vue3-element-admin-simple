@@ -1,0 +1,1 @@
+import{_ as r}from"./index.c78be0a5.js";import"./base-module.ee10d16b.js";import"./element-plus.2a9868ae.js";const t={};function e(n,o){return" login "}const s=r(t,[["render",e]]);export{s as default};
