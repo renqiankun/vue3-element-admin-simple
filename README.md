@@ -15,6 +15,6 @@
 7. ~菜单缩放~
 8. ~打包图片压缩~
 9. 暗黑模式支持 （自定义组件未适配）
-9. 自定义密码组件 基于nice-pass-word修改已支持火狐(https://github.com/zRa1ny/nice-pass-word )不会触发浏览器记住密码操作（请在callback实时获取实际值）
+9. input自定义密码组件 不会触发浏览器记住密码操作
 ![image](https://user-images.githubusercontent.com/27206174/191883270-37fba4fa-d64c-4fed-a77d-4404a8d6db4d.png)
 
